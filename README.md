@@ -24,8 +24,8 @@ Getting Started
 ----------
 
 Your development environment will require:
-*  SBT / Play see [here]() for installation instructions.
-*  MongoDB see [here]() for installation instructions.
+*  SBT / Play see [here](https://www.playframework.com/documentation/2.4.x/Installing) for installation instructions.
+*  MongoDB see [here](https://www.mongodb.org/downloads) for installation instructions.
 
 Once the prerequisites have been installed, you will be able to execute the following from a terminal.
 
