@@ -1,25 +1,19 @@
-Stock Manager
+Modern Web App Template
 ===========
 
-**AngularJS - Scala - Play - Guice - PlayReactiveMongo**
+**Scala - Play - AngularJS - MongoDB**
 
-A full application stack for a Modern Web application, lets review the components:
+A full application stack for a Scala-AngularJS-MongoDB Web application, lets review the components:
 
 * **AngularJS** - client side javascript framework for creating complex MVC applications in Javascript,
-fronted with Twitter bootstrap CSS framework, because well, im not a web designer.
+fronted with Twitter bootstrap CSS framework, because well, I'm not a web designer.
   * Take a look at what the google cool kids are upto here : [AngularJS](http://angularjs.org/)
 
 * **Bootstrap** - Bootstrap components written in pure AngularJS
   *  [http://angular-ui.github.io/bootstrap/](http://angular-ui.github.io/bootstrap/)
 
-* **CoffeeScript** - CoffeeScript is an attempt to expose the good parts of JavaScript in a simple way.
-  *  [http://coffeescript.org/](http://coffeescript.org/)
-
 * **PlayFramework** - currently using 2.3.9 with the scala API
   *  [PlayFramework Docs](http://www.playframework.com/documentation/2.3.9/Home)
-
-* **Guice** integration for Dependency injection,
-  * Special thanks to the typesafehub team for their activator : [Play-Guice](http://www.typesafe.com/activator/template/play-guice)
 
 * **PlayReactiveMongo** gives interaction with MongoDB providing a non-blocking driver as well as some useful additions for handling JSON.
   * Check out their GitHub: [Play-ReactiveMongo](https://github.com/ReactiveMongo/Play-ReactiveMongo)
@@ -36,15 +30,15 @@ Your development environment will require:
 Once the prerequisites have been installed, you will be able to execute the following from a terminal.
 
 ```
-../modern-web-template >  sbt run
+../scala-angular-mongo-template >  sbt run
 ```
 
 This should fetch all the dependencies and start a Web Server listening on *localhost:9000*
 
 ```
-[info] Loading project definition from ../modern-web-template/project
-[info] Set current project to modern-web-template
-[info] Updating modern-web-template...
+[info] Loading project definition from ../scala-angular-mongo-template/project
+[info] Set current project to scala-angular-mongo-template
+[info] Updating scala-angular-mongo-template...
 ...
 [info] Done updating.
 

@@ -1,4 +1,4 @@
-name := """stock-mg"""
+name := """scala-angular-mongo-template"""
 
 version := "0.1-SNAPSHOT"
 
