@@ -1,24 +1,21 @@
 package controllers
 
+import base.Logging
+import play.api.libs.concurrent.Execution.Implicits.defaultContext
+import play.api.libs.json._
+import play.api.mvc._
 import play.modules.reactivemongo.MongoController
 import play.modules.reactivemongo.json.collection.JSONCollection
-import scala.concurrent.Future
 import reactivemongo.api.Cursor
-import play.api.libs.concurrent.Execution.Implicits.defaultContext
-import org.slf4j.{LoggerFactory, Logger}
-import javax.inject.Singleton
-import play.api.mvc._
-import play.api.libs.json._
+
+import scala.concurrent.Future
 
 /**
  * The Users controllers encapsulates the Rest endpoints and the interaction with the MongoDB, via ReactiveMongo
  * play plugin. This provides a non-blocking driver for mongoDB as well as some useful additions for handling JSon.
  * @see https://github.com/ReactiveMongo/Play-ReactiveMongo
  */
-@Singleton
-class Users extends Controller with MongoController {
-
-  private final val logger: Logger = LoggerFactory.getLogger(classOf[Users])
+trait Users extends Controller with MongoController with Logging {
 
   /*
    * Get a JSONCollection (a Collection implementation that is designed to work
@@ -33,8 +30,8 @@ class Users extends Controller with MongoController {
   // Using case classes + Json Writes and Reads //
   // ------------------------------------------ //
 
-  import models._
   import models.JsonFormats._
+  import models._
 
   def createUser = Action.async(parse.json) {
     request =>
@@ -95,3 +92,5 @@ class Users extends Controller with MongoController {
   }
 
 }
+
+object Users extends Users
